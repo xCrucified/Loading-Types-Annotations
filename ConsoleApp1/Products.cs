@@ -13,11 +13,11 @@ namespace ConsoleApp1
         public int Id { get; set; }
 
         [MaxLength(100)]
-        [Required] public string Name { get; set; }
-        [Required] public decimal Price { get; set; }
-        [Required] public float Discount { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public float Discount { get; set; }
 
-        [ForeignKey("Category")]
+        
         public int? CategoryId { get; set; }
         public int Quantity { get; set; }
         public bool isinStock { get; set; }

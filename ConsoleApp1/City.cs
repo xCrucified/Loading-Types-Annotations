@@ -18,6 +18,8 @@ namespace ConsoleApp1
 
         [ForeignKey("Country")]
         public int CountryId { get; set; }
-        Country Country { get; set; }
+        public Country Country { get; set; }
+
+        public ICollection<Shop> Shops { get; set; }
     }
 }
