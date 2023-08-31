@@ -6,13 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Configs
+namespace ConsoleApp1
 {
-    public class Products : IEntityTypeConfiguration<Products>
+    public class ProductsCfg : IEntityTypeConfiguration<Products>
     {
         public void Configure(EntityTypeBuilder<Products> builder)
         {
-            builder.HasKey(x => x.N)
+            builder.HasKey(x => x.Id).HasName("Products");
+
         }
     }
 }

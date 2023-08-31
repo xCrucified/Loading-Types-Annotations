@@ -17,8 +17,8 @@ namespace ConsoleApp1
         [Required] public string Surname { get; set; }
         [Required] public decimal Salary { get; set; }
         [MinLength(15)]
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
+        [Required] public string Email { get; set; }
+        [Required] public string PhoneNumber { get; set; }
         
         [ForeignKey("Position")]
         public int PositionId { get; set; }

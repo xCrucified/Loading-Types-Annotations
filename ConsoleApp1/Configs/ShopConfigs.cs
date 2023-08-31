@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Configs
+namespace ConsoleApp1
 {
     internal class ShopConfigs : IEntityTypeConfiguration<Shop> 
     {

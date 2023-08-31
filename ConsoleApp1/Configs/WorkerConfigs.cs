@@ -14,8 +14,9 @@ namespace ConsoleApp1.Configs
         {
             builder.HasKey(x => x.Id).HasName("Workers");
             builder.Property(x => x.Name).HasMaxLength(200).IsRequired();
+
             builder.HasOne(x => x.Shop).WithMany(x => x.Workers).HasForeignKey(x => x.ShopId).IsRequired();
-            builder.HasOne(x => x.Position).WithMany(x => x.Workers).HasForeignKey(x =>x.PositionId).IsRequired();`
+            builder.HasOne(x => x.Position).WithMany(x => x.Workers).HasForeignKey(x =>x.PositionId).IsRequired();
         }
     }
 }
