@@ -13,7 +13,7 @@ namespace ConsoleApp1
         public void Configure(EntityTypeBuilder<City> builder)
         {
             builder.HasKey(x => x.Id).HasName("Cities");
-            builder.Property(x => x.Name).HasMaxLength(256);
+            builder.Property(x => x.Name).HasMaxLength(255);
             builder.HasOne(x => x.Country).WithMany(x => x.Cities).HasForeignKey(x => x.CountryId).IsRequired();
         }
 
